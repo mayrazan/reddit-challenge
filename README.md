@@ -42,6 +42,6 @@ Start the server
 
 - [ ] Testes unitários;
 - [ ] Testes e2e;
-- [ ] Documentação;
-- [ ] Projeto rodando em algum serviço(Vercel, Netlify, etc);
+- [x] Documentação;
+- [x] Projeto rodando em algum serviço(Vercel, Netlify, etc);
 - [ ] Inclusão de outras funcionalidades(Dark mode, etc).
