@@ -1,10 +1,10 @@
 import React from 'react';
 import Switch from '@material-ui/core/Switch';
-import { useTheme } from '../hooks/useTheme';
 import Box from '../Box';
+import { useTheme } from '../hooks/useTheme';
 
 export default function ToggleSwitch() {
-  const { handleChange, isChecked } = useTheme();
+  const { isChecked, handleChange } = useTheme();
   return (
     <Box width="100%" display="flex" justifyContent="flex-end">
       <Switch

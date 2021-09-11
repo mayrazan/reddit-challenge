@@ -22,7 +22,6 @@ export const useTheme = () => useContext(ThemeContext);
 
 export function ThemeProviderCustom({ children }) {
   const [isChecked, setIsChecked] = useState(false);
-
   const combineTheme = (colors) => ({ ...themeProps, ...colors });
 
   const [theme, setTheme] = useState(combineTheme(lightColors));

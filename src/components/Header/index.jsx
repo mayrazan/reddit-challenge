@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import Text from '../Text';
-import ToggleSwitch from '../ToggleSwitch';
 import Box from '../Box';
+import ToggleSwitch from '../ToggleSwitch';
 
 const SectionContainer = styled.header`
   min-height: 91px;
@@ -28,7 +28,6 @@ const Header = () => (
         </Text>
       ))}
     </Box>
-
     <ToggleSwitch />
   </SectionContainer>
 );

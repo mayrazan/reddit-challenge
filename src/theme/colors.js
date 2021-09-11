@@ -12,6 +12,7 @@ const lightColors = {
     secondary: '#4C5667',
     title: '#FFB800',
     header: '#ffffff',
+    button: '#ffffff',
   },
 };
 
@@ -29,6 +30,7 @@ const darkColors = {
     secondary: '#4C5667',
     title: '#FFB800',
     header: '#ffffff',
+    button: '#ffffff',
   },
 };
 
