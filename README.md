@@ -44,4 +44,4 @@ Start the server
 - [ ] Testes e2e;
 - [x] Documentação;
 - [x] Projeto rodando em algum serviço(Vercel, Netlify, etc);
-- [ ] Inclusão de outras funcionalidades(Dark mode, etc).
+- [x] Inclusão de outras funcionalidades(Dark mode, etc).

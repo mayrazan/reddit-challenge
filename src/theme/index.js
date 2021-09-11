@@ -1,9 +1,7 @@
 import typographyFonts from './typographyFonts';
 import breakpoints from './breakpoints';
-import * as colors from './colors';
 
 export default {
-  colors,
   typographyFonts,
   breakpoints,
   fontFamily: 'Mulish, sans-serif',

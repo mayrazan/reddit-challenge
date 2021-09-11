@@ -1,6 +1,6 @@
 const lightColors = {
   background: {
-    purple: '#6324C6',
+    shadesPurple: '#6324C6',
     gray: ' #A7B0BE',
     white: '#ffffff',
     border: '#4C5667',
@@ -11,23 +11,25 @@ const lightColors = {
     purple: '#6324C6',
     secondary: '#4C5667',
     title: '#FFB800',
+    header: '#ffffff',
   },
 };
 
 const darkColors = {
   background: {
-    purple: '#6324C6',
+    shadesPurple: '#220D45',
     gray: ' #A7B0BE',
     white: '#ffffff',
     border: '#4C5667',
   },
   text: {
-    primary: '#000000',
-    contrastText: '#ffffff',
+    primary: '#ffffff',
+    contrastText: '#000000',
     purple: '#6324C6',
     secondary: '#4C5667',
     title: '#FFB800',
+    header: '#ffffff',
   },
 };
 
-export default { lightColors, darkColors };
+export { lightColors, darkColors };
