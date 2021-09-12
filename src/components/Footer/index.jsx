@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Footer = styled.footer`
-  padding: 20px 56px 38px;
+  padding: 20px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -9,6 +9,9 @@ const Footer = styled.footer`
   position: sticky;
   bottom: 0;
   justify-content: flex-end;
+  ${({ theme }) => theme.breakpoints.md} {
+    padding: 20px 56px 38px;
+  }
 `;
 
 export default Footer;

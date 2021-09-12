@@ -25,6 +25,7 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     flex-direction: column;
     background-color: ${({ theme }) => theme.background.main};
+    width: 100%;
   }
   textarea {
   resize: none;

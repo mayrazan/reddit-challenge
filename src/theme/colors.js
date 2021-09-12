@@ -20,7 +20,7 @@ const darkColors = {
   background: {
     shadesPurple: '#220D45',
     gray: ' #A7B0BE',
-    main: '#494949',
+    main: '#242047',
     border: '#ffffff',
   },
   text: {

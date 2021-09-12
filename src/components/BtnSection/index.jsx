@@ -7,8 +7,11 @@ const StyledSection = styled.section`
   display: flex;
   gap: 16px;
   justify-content: center;
-  padding: 20px 56px;
+  padding: 15px 20px;
   background-color: ${({ theme }) => theme.background.main};
+  ${({ theme }) => theme.breakpoints.md} {
+    padding: 20px 56px;
+  }
 `;
 
 const BtnSection = () => {

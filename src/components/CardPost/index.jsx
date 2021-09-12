@@ -2,11 +2,33 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import Text from '../Text';
-import Box from '../Box';
+
+const ContainerBox = styled.div`
+  flex-wrap: wrap;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 0 20px;
+  ${({ theme }) => theme.breakpoints.md} {
+    padding: 0 56px;
+  }
+`;
+
+const ContainerPost = styled.div`
+  width: inherit;
+  flex-wrap: wrap;
+  display: flex;
+  ${({ theme }) => theme.breakpoints.md} {
+    display: block;
+  }
+`;
 
 const StyledSection = styled.section`
   display: flex;
-  gap: 13px;
+  gap: 5px;
+  ${({ theme }) => theme.breakpoints.md} {
+    gap: 13px;
+  }
 `;
 
 const BorderLine = styled.hr`
@@ -17,86 +39,98 @@ const BorderLine = styled.hr`
 const ImgStyled = styled.img`
   width: 77px;
   height: 77px;
-  background: #a7b0be;
-  border-radius: 8px;
+  background-color: ${({ theme }) => theme.background.gray};
+  border-radius: ${({ theme }) => theme.borderRadius};
 `;
 
 const ImgContainer = styled.div`
-  width: 77px;
   height: 77px;
-  background: #a7b0be;
-  border-radius: 8px;
-  min-width: 77px;
+  background-color: ${({ theme }) => theme.background.gray};
+  border-radius: ${({ theme }) => theme.borderRadius};
   min-height: 77px;
   overflow: hidden;
+  ${({ theme }) => theme.breakpoints.md} {
+    width: 77px;
+    min-width: 77px;
+  }
 `;
 
-function timeConverter(timeDate) {
+const TextStyled = styled(Text)`
+  overflow-wrap: break-word;
+  width: inherit;
+`;
+
+const BoxInfo = styled.div`
+  width: 80%;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  ${({ theme }) => theme.breakpoints.md} {
+    width: 100%;
+    max-width: 100%;
+  }
+`;
+
+const TitlePostStyled = styled(Text)`
+  font-weight: bold;
+  width: inherit;
+  ${({ theme }) => theme.breakpoints.md} {
+    font-size: 20px;
+  }
+`;
+
+const timeConverter = (timeDate) => {
   const a = new Date(timeDate * 1000).getTime();
   const timestamp = new Date().getTime();
-  //   const months = [
-  //     'Jan',
-  //     'Fev',
-  //     'Mar',
-  //     'Abr',
-  //     'Mai',
-  //     'Jun',
-  //     'Jul',
-  //     'Ago',
-  //     'Set',
-  //     'Out',
-  //     'Nov',
-  //     'Dez',
-  //   ];
-  //   const year = a.getFullYear();
-  //   const month = months[a.getMonth()];
-  //   const date = a.getDate();
-  //   const hour = a.getHours();
-  //   const min = a.getMinutes();
-  //   const sec = a.getSeconds();
-  //   const time = `${date} ${month} ${year} - ${hour}:${min}:${sec}`;
-  const total = (timestamp - a);
-  return new Date(total).toLocaleTimeString('pt-br');
-}
+  const total = timestamp - a;
+  return new Date(total).getHours();
+};
 
 const CardPost = ({ posts }) => (
-  <Box padding="0 56px">
-    {posts.map((item, index) => (
-      <div key={item.data.id.concat(index.toString())}>
-        <BorderLine />
-        <StyledSection>
-          <ImgContainer>
-            <ImgStyled
-              src={item.data.all_awardings[0]?.icon_url}
-              alt="sem imagem"
-            />
-          </ImgContainer>
-          <Box display="flex" flexDirection="column">
-            <Text color="primary">{item.data.title}</Text>
-            <div>
-              <Text color="secondary" variant="text">
-                {`Enviado em ${timeConverter(item.data.created_utc)} por `}
-              </Text>
-              <Text color="purple" variant="text">
-                {item.data.author}
-              </Text>
-            </div>
+  <ContainerBox>
+    {posts.map((item, index) => {
+      const verify = item.data.url.length > 27
+        ? `${item.data.url.substring(0, 23)}...`
+        : item.data.url;
+      return (
+        <ContainerPost key={item.data.id.concat(index.toString())}>
+          <BorderLine />
+          <StyledSection>
+            <ImgContainer>
+              <ImgStyled
+                src={item.data.all_awardings[0]?.icon_url}
+                alt="sem imagem"
+              />
+            </ImgContainer>
+            <BoxInfo>
+              <TitlePostStyled color="primary" variant="text">
+                {item.data.title}
+              </TitlePostStyled>
+              <div style={{ width: 'inherit' }}>
+                <Text color="secondary" variant="text">
+                  {`Enviado há ${timeConverter(item.data.created_utc)}h por `}
+                </Text>
+                <TextStyled color="purple" variant="text">
+                  {item.data.author}
+                </TextStyled>
+              </div>
 
-            <Text
-              color="primary"
-              variant="text"
-              bold
-              tag="a"
-              href={item.data.url}
-              target="_blank"
-            >
-              {item.data.url}
-            </Text>
-          </Box>
-        </StyledSection>
-      </div>
-    ))}
-  </Box>
+              <TextStyled
+                color="primary"
+                variant="text"
+                bold
+                tag="a"
+                href={item.data.url}
+                target="_blank"
+              >
+                {verify}
+              </TextStyled>
+            </BoxInfo>
+          </StyledSection>
+        </ContainerPost>
+      );
+    })}
+  </ContainerBox>
 );
 export default CardPost;
 

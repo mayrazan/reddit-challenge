@@ -6,7 +6,11 @@ const Button = styled.button`
   border-radius: ${({ theme }) => theme.borderRadius};
   transition: opacity ${({ theme }) => theme.transition};
   background-color: ${({ theme }) => theme.background.gray};
-  ${TextStyleVariants('subtitle')}
+  ${({ theme }) => theme.breakpoints.md} {
+    ${TextStyleVariants('subtitle')}
+  }
+  ${TextStyleVariants('text')}
+  font-weight: 600;
   width: 202px;
   height: 48px;
   border: 0;
