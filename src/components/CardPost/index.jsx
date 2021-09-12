@@ -24,12 +24,18 @@ const timeConverter = (timeDate) => {
   const hoursDifference = Math.floor(difference / 1000 / 60 / 60);
   difference -= hoursDifference * 1000 * 60 * 60;
 
-  // const minutesDifference = Math.floor(difference / 1000 / 60);
-  // difference -= minutesDifference * 1000 * 60;
+  const minutesDifference = Math.floor(difference / 1000 / 60);
+  difference -= minutesDifference * 1000 * 60;
 
   // const secondsDifference = Math.floor(difference / 1000);
-
-  return `Enviado há ${daysDifference} dias e ${hoursDifference}h por `;
+  const messageTime = {
+    days: `Enviado há ${daysDifference} dias e ${hoursDifference}h por `,
+    hours: `Enviado há ${hoursDifference}h por `,
+  };
+  if (daysDifference > 0) {
+    return messageTime.days;
+  }
+  return messageTime.hours;
 };
 
 const CardPost = ({ posts }) => (
