@@ -10,6 +10,7 @@ const Box = styled.div`
   ${styleProps('flexDirection')}
   ${styleProps('height')}
   ${styleProps('backgroundColor')}
+  ${styleProps('alignItems')}
 `;
 
 export default Box;

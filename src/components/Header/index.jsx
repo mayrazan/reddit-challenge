@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import { Grid } from '@material-ui/core';
 import Text from '../Text';
-import Box from '../Box';
 import ToggleSwitch from '../ToggleSwitch';
 
 const SectionContainer = styled.header`
@@ -21,14 +21,19 @@ const chooseColor = {
 
 const Header = () => (
   <SectionContainer>
-    <Box width="100%" display="flex" justifyContent="flex-end">
-      {'REACT JS'.split(/[\s,]+/).map((item) => (
-        <Text color={chooseColor[item]} variant="title" key={item}>
-          {item}
-        </Text>
-      ))}
-    </Box>
-    <ToggleSwitch />
+    <Grid container spacing={3} alignItems="center">
+      <Grid item xs />
+      <Grid item xs>
+        {'REACT JS'.split(/[\s,]+/).map((item) => (
+          <Text color={chooseColor[item]} variant="title" key={item}>
+            {item}
+          </Text>
+        ))}
+      </Grid>
+      <Grid item xs={3} md={1}>
+        <ToggleSwitch />
+      </Grid>
+    </Grid>
   </SectionContainer>
 );
 

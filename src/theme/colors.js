@@ -4,6 +4,7 @@ const lightColors = {
     gray: ' #A7B0BE',
     main: '#ffffff',
     border: '#4C5667',
+    fill: '#FFB800',
   },
   text: {
     primary: '#000000',
@@ -18,15 +19,16 @@ const lightColors = {
 
 const darkColors = {
   background: {
-    shadesPurple: '#220D45',
+    shadesPurple: '#483F8D',
     gray: ' #A7B0BE',
-    main: '#242047',
+    main: '#322C63',
     border: '#ffffff',
+    fill: '#000000',
   },
   text: {
     primary: '#ffffff',
     contrastText: '#000000',
-    purple: '#6324C6',
+    purple: '#7D41DC',
     secondary: '#d5d5d5',
     title: '#FFB800',
     header: '#ffffff',

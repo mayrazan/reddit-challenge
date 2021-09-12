@@ -35,13 +35,18 @@ Start the server
 ## Tech Stack
 
 - React
-- Styled-Components
+- Styled Components
 - Prop-Types
+- Material UI
 
-## Extra Assignments
+## Application Features
 
 - [ ] Testes unitários;
 - [ ] Testes e2e;
 - [x] Documentação;
-- [x] Projeto rodando em algum serviço(Vercel, Netlify, etc);
-- [x] Inclusão de outras funcionalidades(Dark mode, etc).
+- [x] Projeto rodando na Vercel;
+- [x] Dark Mode;
+- [x] Tratamento para rotas não existentes;
+- [x] Páginas responsivas; 
+- [x] Uso de Context API para compartilhar o tema entre páginas e componentes.
+- [x] Tratamento de erros para bad requests da api.

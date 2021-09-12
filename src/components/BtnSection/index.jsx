@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import { useHistory } from 'react-router-dom';
 import Button from '../Button';
-import history from '../../utils/history';
 
 const StyledSection = styled.section`
   display: flex;
@@ -15,7 +15,8 @@ const StyledSection = styled.section`
 `;
 
 const BtnSection = () => {
-  const [isActive, setIsActive] = useState('/');
+  const history = useHistory();
+  const [isActive, setIsActive] = useState(history.location.pathname);
 
   const goToPath = (path) => {
     setIsActive(path);
@@ -33,10 +34,10 @@ const BtnSection = () => {
       </Button>
       <Button
         color="button"
-        onClick={() => goToPath('/news')}
-        isActive={isActive === '/news'}
+        onClick={() => goToPath('/new')}
+        isActive={isActive === '/new'}
       >
-        News
+        New
       </Button>
       <Button
         color="button"
