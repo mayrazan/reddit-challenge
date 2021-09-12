@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Grid } from '@material-ui/core';
-import Text from '../Text';
+import Text, { TextStyleVariants } from '../Text';
 import ToggleSwitch from '../ToggleSwitch';
 
 const SectionContainer = styled.header`
@@ -14,6 +14,13 @@ const SectionContainer = styled.header`
   justify-content: flex-end;
 `;
 
+const TextStyled = styled(Text)`
+  ${TextStyleVariants('titleSM')}
+  ${({ theme }) => theme.breakpoints.sm} {
+    ${TextStyleVariants('title')}
+  }
+`;
+
 const chooseColor = {
   REACT: 'header',
   JS: 'title',
@@ -22,15 +29,15 @@ const chooseColor = {
 const Header = () => (
   <SectionContainer>
     <Grid container spacing={3} alignItems="center">
-      <Grid item xs />
+      <Grid item xs={1} sm />
       <Grid item xs>
         {'REACT JS'.split(/[\s,]+/).map((item) => (
-          <Text color={chooseColor[item]} variant="title" key={item}>
+          <TextStyled color={chooseColor[item]} key={item}>
             {item}
-          </Text>
+          </TextStyled>
         ))}
       </Grid>
-      <Grid item xs={3} md={1}>
+      <Grid item xs={2} md={1}>
         <ToggleSwitch />
       </Grid>
     </Grid>

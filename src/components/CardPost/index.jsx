@@ -14,10 +14,22 @@ import {
 } from './style';
 
 const timeConverter = (timeDate) => {
-  const a = new Date(timeDate * 1000).getTime();
-  const timestamp = new Date().getTime();
-  const total = timestamp - a;
-  return new Date(total).getHours();
+  const timestamp = new Date(timeDate * 1000).getTime();
+  const currentDate = new Date().getTime();
+  let difference = currentDate - timestamp;
+
+  const daysDifference = Math.floor(difference / 1000 / 60 / 60 / 24);
+  difference -= daysDifference * 1000 * 60 * 60 * 24;
+
+  const hoursDifference = Math.floor(difference / 1000 / 60 / 60);
+  difference -= hoursDifference * 1000 * 60 * 60;
+
+  // const minutesDifference = Math.floor(difference / 1000 / 60);
+  // difference -= minutesDifference * 1000 * 60;
+
+  // const secondsDifference = Math.floor(difference / 1000);
+
+  return `Enviado há ${daysDifference} dias e ${hoursDifference}h por `;
 };
 
 const CardPost = ({ posts }) => (
@@ -46,7 +58,7 @@ const CardPost = ({ posts }) => (
               </TitlePostStyled>
               <div style={{ width: 'inherit' }}>
                 <Text color="secondary" variant="text">
-                  {`Enviado há ${timeConverter(item.data.created_utc)}h por `}
+                  {timeConverter(item.data.created_utc)}
                 </Text>
                 <TextStyled color="purple" variant="text">
                   {item.data.author}
