@@ -1,3 +1,4 @@
+/* eslint-disable implicit-arrow-linebreak */
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import CardPost from '../../CardPost';
@@ -8,18 +9,22 @@ import Loading from '../../Loading';
 import Header from '../../Header';
 import BtnSection from '../../BtnSection';
 import Text from '../../Text';
+import { useTheme } from '../../../hooks/useTheme';
 
 const PageScreenDefault = ({ url }) => {
   const [posts, setPosts] = useState([]);
+  const [filter, setFilter] = useState([]);
   const [page, setPage] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
+  const { valueSearch } = useTheme();
 
   useEffect(() => {
     getPosts(url, 1)
       .then((res) => {
         setPosts(res.data);
+        setFilter(res.data);
         setPage(res.next);
         setIsLoading(true);
         setErrorMessage('');
@@ -35,11 +40,25 @@ const PageScreenDefault = ({ url }) => {
       });
   }, [url]);
 
+  const searchPost = () => {
+    if (!valueSearch) {
+      setFilter(posts);
+    }
+    const search = posts.filter((i) =>
+      i.data.title.toLowerCase().includes(valueSearch.toLowerCase()));
+    setFilter(search);
+  };
+
+  useEffect(() => {
+    searchPost();
+  }, [valueSearch]);
+
   const seeMore = () => {
     getPosts(url, 25, page)
       .then((res) => {
         setIsLoadingMore(true);
         setPosts((prevState) => [...prevState, ...res.data]);
+        setFilter((prevState) => [...prevState, ...res.data]);
         setPage(res.next);
         setErrorMessage('');
         window.scrollTo({
@@ -75,17 +94,27 @@ const PageScreenDefault = ({ url }) => {
         </div>
       ) : (
         <>
-          <CardPost posts={posts} />
-          <Footer>
-            <Button
-              color="button"
-              fullWidth
-              onClick={seeMore}
-              disabled={isLoadingMore || !page}
-            >
-              {!isLoadingMore ? '+ Ver mais' : <Loading size={30} />}
-            </Button>
-          </Footer>
+          {filter.length === 0 && valueSearch ? (
+            <div style={{ alignSelf: 'center', margin: 'auto' }}>
+              <Text tag="h2" variant="title" color="primary">
+                Nenhum resultado encontrado!
+              </Text>
+            </div>
+          ) : (
+            <CardPost posts={filter} />
+          )}
+          {!valueSearch && (
+            <Footer>
+              <Button
+                color="button"
+                fullWidth
+                onClick={seeMore}
+                disabled={isLoadingMore || !page}
+              >
+                {!isLoadingMore ? '+ Ver mais' : <Loading size={30} />}
+              </Button>
+            </Footer>
+          )}
         </>
       )}
     </>

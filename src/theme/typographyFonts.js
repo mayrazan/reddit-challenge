@@ -5,6 +5,12 @@ const typographyFonts = {
     fontWeight: 'bold',
     lineHeight: '45px',
   },
+  // [titleSM]
+  titleSM: {
+    fontSize: '26px',
+    fontWeight: 'bold',
+    lineHeight: '25px',
+  },
   // [subtitle]
   subtitle: {
     fontSize: '20px',

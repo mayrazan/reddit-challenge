@@ -16,12 +16,16 @@ const ThemeContext = createContext({
   theme: {},
   handleChange: () => {},
   isChecked: false,
+  handleChangeInput: () => {},
+  valueSearch: '',
+  setValueSearch: () => {},
 });
 
 export const useTheme = () => useContext(ThemeContext);
 
 export function ThemeProviderCustom({ children }) {
   const [isChecked, setIsChecked] = useState(false);
+  const [valueSearch, setValueSearch] = useState('');
   const combineTheme = (colors) => ({ ...themeProps, ...colors });
 
   const [theme, setTheme] = useState(combineTheme(lightColors));
@@ -39,6 +43,11 @@ export function ThemeProviderCustom({ children }) {
     setIsChecked(checked);
   };
 
+  const handleChangeInput = (event) => {
+    const { value } = event.target;
+    setValueSearch(value);
+  };
+
   return (
     <ThemeContext.Provider
       value={{
@@ -46,6 +55,9 @@ export function ThemeProviderCustom({ children }) {
         theme,
         handleChange,
         isChecked,
+        handleChangeInput,
+        valueSearch,
+        setValueSearch,
       }}
     >
       <ThemeProvider theme={theme}>

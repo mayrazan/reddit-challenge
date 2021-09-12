@@ -49,4 +49,5 @@ Start the server
 - [x] Tratamento para rotas não existentes;
 - [x] Páginas responsivas; 
 - [x] Uso de Context API para compartilhar o tema entre páginas e componentes.
-- [x] Tratamento de erros para bad requests da api.
+- [x] Tratamento de erros para bad requests da api;
+- [x] Busca por posts.
