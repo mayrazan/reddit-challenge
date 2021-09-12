@@ -18,11 +18,13 @@ const GlobalStyle = createGlobalStyle`
     display: flex;
     min-height: 100vh;
     width: 100%;
+    background-color: ${({ theme }) => theme.background.main};
   }
   #root {
     flex: 1;
     display: flex;
     flex-direction: column;
+    background-color: ${({ theme }) => theme.background.main};
   }
   textarea {
   resize: none;

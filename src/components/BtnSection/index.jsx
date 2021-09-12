@@ -8,6 +8,7 @@ const StyledSection = styled.section`
   gap: 16px;
   justify-content: center;
   padding: 20px 56px;
+  background-color: ${({ theme }) => theme.background.main};
 `;
 
 const BtnSection = () => {

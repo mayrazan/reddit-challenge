@@ -1,5 +1,4 @@
 import styled, { css } from 'styled-components';
-import styleProps from '../../utils/receiveStyleProps';
 import { TextStyleVariants } from '../Text';
 
 const Button = styled.button`
@@ -26,10 +25,6 @@ const Button = styled.button`
       width: 100%;
       background-color: ${({ theme }) => theme.background.shadesPurple};
     `};
-  
-
-  ${styleProps('margin')}
-  ${styleProps('display')}
 
   ${({ isActive }) => isActive
     && css`

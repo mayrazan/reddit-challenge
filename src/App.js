@@ -2,7 +2,7 @@ import React from 'react';
 import { Router } from 'react-router-dom';
 import BtnSection from './components/BtnSection';
 import Header from './components/Header';
-import { ThemeProviderCustom } from './components/hooks/useTheme';
+import { ThemeProviderCustom } from './hooks/useTheme';
 import Routes from './routes';
 import history from './utils/history';
 
@@ -10,8 +10,11 @@ function App() {
   return (
     <ThemeProviderCustom>
       <Router history={history}>
-        <Header />
-        <BtnSection />
+        <div style={{ position: 'sticky', top: '0' }}>
+          <Header />
+          <BtnSection />
+        </div>
+
         <Routes />
       </Router>
     </ThemeProviderCustom>

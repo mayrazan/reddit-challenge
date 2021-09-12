@@ -6,6 +6,10 @@ const Box = styled.div`
   ${styleProps('width')}
   ${styleProps('display')}
   ${styleProps('justifyContent')}
+  ${styleProps('padding')}
+  ${styleProps('flexDirection')}
+  ${styleProps('height')}
+  ${styleProps('backgroundColor')}
 `;
 
 export default Box;
