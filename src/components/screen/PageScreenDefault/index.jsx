@@ -61,7 +61,7 @@ const PageScreenDefault = ({ url }) => {
         setFilter((prevState) => [...prevState, ...res.data]);
         setPage(res.next);
         setErrorMessage('');
-        window.scrollTo({
+        window.scroll({
           top: document.body.scrollHeight,
           behavior: 'smooth',
         });
