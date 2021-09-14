@@ -3,8 +3,9 @@ module.exports = {
     browser: true,
     es2021: true,
     'jest/globals': true,
+    'cypress/globals': true,
   },
-  extends: ['plugin:react/recommended', 'airbnb'],
+  extends: ['plugin:react/recommended', 'airbnb', 'plugin:cypress/recommended'],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
