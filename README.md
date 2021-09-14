@@ -32,22 +32,32 @@ Start the server
   yarn start
 ```
 
+## Tests
+
+To run tests use the commands bellow
+
+```bash
+  yarn test to @testing-library/react tests
+  yarn test:integration to cypress tests
+```
+
 ## Tech Stack
 
 - React
 - Styled Components
 - Prop-Types
 - Material UI
+- Cypress
 
 ## Application Features
 
-- [ ] Testes unitários;
-- [ ] Testes e2e;
+- [x] Testes unitários;
+- [x] Testes e2e;
 - [x] Documentação;
 - [x] Projeto rodando na Vercel;
 - [x] Dark Mode;
 - [x] Tratamento para rotas não existentes;
-- [x] Páginas responsivas; 
+- [x] Páginas responsivas;
 - [x] Uso de Context API para compartilhar o tema entre páginas e componentes.
 - [x] Tratamento de erros para bad requests da api;
 - [x] Busca por posts.
