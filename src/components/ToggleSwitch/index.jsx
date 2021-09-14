@@ -27,7 +27,7 @@ export default function ToggleSwitch() {
         onChange={handleChange}
         color="default"
         name="checkedTheme"
-        inputProps={{ 'aria-label': 'primary checkbox' }}
+        inputProps={{ 'aria-label': 'dark mode' }}
       />
       <IconStyled fontSize="large" />
     </BoxStyled>

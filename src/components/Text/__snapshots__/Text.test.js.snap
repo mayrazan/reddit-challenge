@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> render component 1`] = `
+.c0 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+}
+
+<span
+  class="c0"
+  color="#000000"
+>
+  Home
+</span>
+`;
+
+exports[`<Text /> render component with props 1`] = `
+.c0 {
+  color: #ffffff;
+  margin: 0;
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 45px;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c0:hover {
+  color: #4C5667;
+}
+
+<a
+  class="c0"
+  color="contrastText"
+  href="/"
+  target="_blank"
+>
+  Home
+</a>
+`;
