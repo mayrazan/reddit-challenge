@@ -1,18 +1,36 @@
 /// <reference types="cypress" />
 
 describe('/buttonNavigation', () => {
-  it('click on button new to navigate to posts in that category', () => {
-    cy.visit('/');
+  beforeEach(() => {
+    cy.restoreLocalStorage();
+  });
 
-    // clicar no botão new
-    cy.get('button').contains('New', { timeout: 30000 }).click();
+  afterEach(() => {
+    cy.saveLocalStorage();
+  });
+  describe('/login', () => {
+    it('should be visible', () => {
+      cy.visit('/');
+      cy.get('button').should('be.visible');
+      cy.setLocalStorage('user', true);
+      cy.setLocalStorage('@token', '@token');
+    });
+  });
 
-    cy.intercept(
-      'https://www.reddit.com/r/reactjs/new.json?count=1&raw_json=1&after=undefined',
-    ).as('apiRequest');
+  describe('after login', () => {
+    it('click on button new to navigate to posts in that category', () => {
+      cy.visit('/hot');
 
-    cy.url().should('include', 'new');
+      // clicar no botão new
+      cy.get('button').contains('New', { timeout: 30000 }).click();
 
-    cy.wait('@apiRequest').its('response.statusCode').should('eq', 200);
+      cy.intercept(
+        'https://www.reddit.com/r/reactjs/new.json?count=1&raw_json=1&after=undefined',
+      ).as('apiRequest');
+
+      cy.url().should('include', 'new');
+
+      cy.wait('@apiRequest').its('response.statusCode').should('eq', 200);
+    });
   });
 });

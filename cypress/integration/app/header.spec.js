@@ -1,9 +1,27 @@
 /// <reference types="cypress" />
 
 describe('header', () => {
-  it('is visible', () => {
-    cy.visit('/');
+  beforeEach(() => {
+    cy.restoreLocalStorage();
+  });
 
-    cy.get('header').should('be.visible');
+  afterEach(() => {
+    cy.saveLocalStorage();
+  });
+  describe('/login', () => {
+    it('should be visible', () => {
+      cy.visit('/');
+      cy.get('button').should('be.visible');
+      cy.setLocalStorage('user', true);
+      cy.setLocalStorage('@token', '@token');
+    });
+  });
+
+  describe('after login', () => {
+    it('header is visible', () => {
+      cy.visit('/hot');
+      cy.url().should('include', 'hot');
+      cy.get('header').should('be.visible');
+    });
   });
 });

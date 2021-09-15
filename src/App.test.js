@@ -4,6 +4,6 @@ import App from './App';
 
 test('renders react title', () => {
   render(<App />);
-  const textHeader = screen.getByText(/react/i);
+  const textHeader = screen.getByText(/desafio/i);
   expect(textHeader).toBeInTheDocument();
 });

@@ -48,6 +48,7 @@ To run tests use the commands bellow
 - Prop-Types
 - Material UI
 - Cypress
+- Lottie
 
 ## Application Features
 
@@ -60,4 +61,5 @@ To run tests use the commands bellow
 - [x] Páginas responsivas;
 - [x] Uso de Context API para compartilhar o tema entre páginas e componentes.
 - [x] Tratamento de erros para bad requests da api;
-- [x] Busca por posts.
+- [x] Busca por posts;
+- [x] Login com google e autenticação de rotas.
