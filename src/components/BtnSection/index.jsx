@@ -46,8 +46,8 @@ const BtnSection = () => {
       <StyledSection>
         <Button
           color="button"
-          onClick={() => goToPath('/')}
-          isActive={isActive === '/'}
+          onClick={() => goToPath('/hot')}
+          isActive={isActive === '/hot'}
         >
           Hot
         </Button>
