@@ -63,3 +63,8 @@ To run tests use the commands bellow
 - [x] Tratamento de erros para bad requests da api;
 - [x] Busca por posts;
 - [x] Login com google e autenticação de rotas.
+
+## PARA RODAR LOCALMENTE SEM PRECISAR DE UMA CHAVE DO GOOGLE
+
+- SE FOR RODAR O PROJETO LOCALMENTE, RETIRE A VERIFICAÇÃO DE ROTAS NO ARQUIVO ROUTES
+- SETAR A VARIÁVEL ISSIGNED PARA TRUE PARA TER ACESSO AS DEMAIS ROTAS ALÉM DO LOGIN NA PASTA HOOKS - USEAUTH
