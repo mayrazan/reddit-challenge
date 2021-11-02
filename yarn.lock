@@ -4418,10 +4418,10 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
-cypress-localstorage-commands@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/cypress-localstorage-commands/-/cypress-localstorage-commands-1.5.0.tgz#53d67c1ce491dcbe39794151749b943227e65cd7"
-  integrity sha512-gl1uKeviYdyJG4dLcZ9hfoUjLciwkkfbaQ3gvRtmipsPxC612ZBJhSjbunnJcUGwkryaM+82VrY9ij0tLSg7LA==
+cypress-localstorage-commands@^1.6.0:
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/cypress-localstorage-commands/-/cypress-localstorage-commands-1.6.0.tgz#f056c791832ea3357f6037fa16c07408e5734878"
+  integrity sha512-E3MNTjGM4rL94FvTJ52H/D/6BOFnRyMBYlEZWIyy+eWOcJ3ubwmRpRPWaGFMslYzeYgBc+LpXE027jauz/W0Xw==
 
 cypress-social-logins@^1.11.3:
   version "1.11.3"
