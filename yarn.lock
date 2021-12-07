@@ -4418,23 +4418,23 @@ cyclist@^1.0.1:
   resolved "https://registry.yarnpkg.com/cyclist/-/cyclist-1.0.1.tgz#596e9698fd0c80e12038c2b82d6eb1b35b6224d9"
   integrity sha1-WW6WmP0MgOEgOMK4LW6xs1tiJNk=
 
-cypress-localstorage-commands@^1.6.0:
-  version "1.6.0"
-  resolved "https://registry.yarnpkg.com/cypress-localstorage-commands/-/cypress-localstorage-commands-1.6.0.tgz#f056c791832ea3357f6037fa16c07408e5734878"
-  integrity sha512-E3MNTjGM4rL94FvTJ52H/D/6BOFnRyMBYlEZWIyy+eWOcJ3ubwmRpRPWaGFMslYzeYgBc+LpXE027jauz/W0Xw==
+cypress-localstorage-commands@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/cypress-localstorage-commands/-/cypress-localstorage-commands-1.6.1.tgz#22299ee8a5555037f4e42111ffb280f2e0fe7d7b"
+  integrity sha512-rvXCB0iLzC3i9y91XH4N2I55NicH62gQk5z/APblCjnNR3wWTbDs8svC7GvE1fjt9AMIHSQm1RfWx037y+TciQ==
 
-cypress-social-logins@^1.11.3:
-  version "1.11.3"
-  resolved "https://registry.yarnpkg.com/cypress-social-logins/-/cypress-social-logins-1.11.3.tgz#3a4e1a8f74f87fa4e2355d742543f2e42c155d79"
-  integrity sha512-b/jOgXNcQmDFtAnXqfNcfAHL6zFMvaeVwSRfJ6PqNBgzP6lMCSNKV5Qy3YF0Vo+B4kVkYSe0coxap2DG6QTAvQ==
+cypress-social-logins@^1.12.0:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/cypress-social-logins/-/cypress-social-logins-1.12.0.tgz#a2fdf716850c8e242a8e97f73b1fc3350c3cf921"
+  integrity sha512-7yO7k2S+myJILWKN9fv5pj7NJRfpe2KY1XFhPuHf9FGUTpa+t1hIVldpewxGK5nLYonAuiqL1UApqT8zZHnC7A==
   dependencies:
     otplib "^12.0.1"
     puppeteer "^2.1.1"
 
-cypress@8.5.0:
-  version "8.5.0"
-  resolved "https://registry.yarnpkg.com/cypress/-/cypress-8.5.0.tgz#5712ca170913f8344bf167301205c4217c1eb9bd"
-  integrity sha512-MMkXIS+Ro2KETn4gAlG3tIc/7FiljuuCZP0zpd9QsRG6MZSyZW/l1J3D4iQM6WHsVxuX4rFChn5jPFlC2tNSvQ==
+cypress@8.7.0:
+  version "8.7.0"
+  resolved "https://registry.yarnpkg.com/cypress/-/cypress-8.7.0.tgz#2ee371f383d8f233d3425b6cc26ddeec2668b6da"
+  integrity sha512-b1bMC3VQydC6sXzBMFnSqcvwc9dTZMgcaOzT0vpSD+Gq1yFc+72JDWi55sfUK5eIeNLAtWOGy1NNb6UlhMvB+Q==
   dependencies:
     "@cypress/request" "^2.88.6"
     "@cypress/xvfb" "^1.2.4"
@@ -5151,7 +5151,7 @@ eslint-import-resolver-node@^0.3.6:
     debug "^3.2.7"
     resolve "^1.20.0"
 
-eslint-module-utils@^2.7.0:
+eslint-module-utils@^2.7.1:
   version "2.7.1"
   resolved "https://registry.yarnpkg.com/eslint-module-utils/-/eslint-module-utils-2.7.1.tgz#b435001c9f8dd4ab7f6d0efcae4b9696d4c24b7c"
   integrity sha512-fjoetBXQZq2tSTWZ9yWVl2KuFrTZZH3V+9iD1V1RfpDgxzJR+mPd/KZmMiA8gbPqdBzpNiEHOuT7IYEWxrH0zQ==
@@ -5175,19 +5175,19 @@ eslint-plugin-flowtype@^5.2.0:
     lodash "^4.17.15"
     string-natural-compare "^3.0.1"
 
-eslint-plugin-import@^2.22.1, eslint-plugin-import@^2.25.2:
-  version "2.25.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.25.2.tgz#b3b9160efddb702fc1636659e71ba1d10adbe9e9"
-  integrity sha512-qCwQr9TYfoBHOFcVGKY9C9unq05uOxxdklmBXLVvcwo68y5Hta6/GzCZEMx2zQiu0woKNEER0LE7ZgaOfBU14g==
+eslint-plugin-import@^2.22.1, eslint-plugin-import@^2.25.3:
+  version "2.25.3"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-import/-/eslint-plugin-import-2.25.3.tgz#a554b5f66e08fb4f6dc99221866e57cfff824766"
+  integrity sha512-RzAVbby+72IB3iOEL8clzPLzL3wpDrlwjsTBAQXgyp5SeTqqY+0bFubwuo+y/HLhNZcXV4XqTBO4LGsfyHIDXg==
   dependencies:
     array-includes "^3.1.4"
     array.prototype.flat "^1.2.5"
     debug "^2.6.9"
     doctrine "^2.1.0"
     eslint-import-resolver-node "^0.3.6"
-    eslint-module-utils "^2.7.0"
+    eslint-module-utils "^2.7.1"
     has "^1.0.3"
-    is-core-module "^2.7.0"
+    is-core-module "^2.8.0"
     is-glob "^4.0.3"
     minimatch "^3.0.4"
     object.values "^1.1.5"
@@ -6764,7 +6764,7 @@ is-color-stop@^1.0.0:
     rgb-regex "^1.0.1"
     rgba-regex "^1.0.0"
 
-is-core-module@^2.0.0, is-core-module@^2.2.0, is-core-module@^2.7.0:
+is-core-module@^2.0.0, is-core-module@^2.2.0, is-core-module@^2.8.0:
   version "2.8.0"
   resolved "https://registry.yarnpkg.com/is-core-module/-/is-core-module-2.8.0.tgz#0321336c3d0925e497fd97f5d95cb114a5ccd548"
   integrity sha512-vd15qHsaqrRL7dtH6QNuy0ndJmRDrS9HAM1CAiSifNUFv4x1a0CCVsj18hJ1mShxIG6T2i1sO78MkP56r0nYRw==
