@@ -4423,10 +4423,10 @@ cypress-localstorage-commands@^1.6.0:
   resolved "https://registry.yarnpkg.com/cypress-localstorage-commands/-/cypress-localstorage-commands-1.6.0.tgz#f056c791832ea3357f6037fa16c07408e5734878"
   integrity sha512-E3MNTjGM4rL94FvTJ52H/D/6BOFnRyMBYlEZWIyy+eWOcJ3ubwmRpRPWaGFMslYzeYgBc+LpXE027jauz/W0Xw==
 
-cypress-social-logins@^1.11.3:
-  version "1.11.3"
-  resolved "https://registry.yarnpkg.com/cypress-social-logins/-/cypress-social-logins-1.11.3.tgz#3a4e1a8f74f87fa4e2355d742543f2e42c155d79"
-  integrity sha512-b/jOgXNcQmDFtAnXqfNcfAHL6zFMvaeVwSRfJ6PqNBgzP6lMCSNKV5Qy3YF0Vo+B4kVkYSe0coxap2DG6QTAvQ==
+cypress-social-logins@^1.12.0:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/cypress-social-logins/-/cypress-social-logins-1.12.0.tgz#a2fdf716850c8e242a8e97f73b1fc3350c3cf921"
+  integrity sha512-7yO7k2S+myJILWKN9fv5pj7NJRfpe2KY1XFhPuHf9FGUTpa+t1hIVldpewxGK5nLYonAuiqL1UApqT8zZHnC7A==
   dependencies:
     otplib "^12.0.1"
     puppeteer "^2.1.1"
