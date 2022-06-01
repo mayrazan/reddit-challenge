@@ -13,7 +13,7 @@
     "@testing-library/user-event": "^13.5.0",
     "@types/jest": "^27.0.2",
     "eslint-plugin-jest": "^25.3.0",
-    "cypress-localstorage-commands": "^1.6.1",
+    "cypress-localstorage-commands": "^2.0.0",
     "jest-canvas-mock": "^2.3.1",
     "jest-styled-components": "^7.0.8",
     "prop-types": "^15.8.1",
